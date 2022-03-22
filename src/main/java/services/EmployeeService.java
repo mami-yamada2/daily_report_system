@@ -15,7 +15,6 @@ import utils.EncryptUtil;
 /**
  * 従業員テーブルの操作に関わる処理を行うクラス
  */
-
 public class EmployeeService extends ServiceBase {
 
     /**
@@ -23,7 +22,7 @@ public class EmployeeService extends ServiceBase {
      * @param page ページ数
      * @return 表示するデータのリスト
      */
-    public List<EmployeeView> getPerpage(int page){
+    public List<EmployeeView> getPerPage(int page) {
         List<Employee> employees = em.createNamedQuery(JpaConst.Q_EMP_GET_ALL, Employee.class)
                 .setFirstResult(JpaConst.ROW_PER_PAGE * (page - 1))
                 .setMaxResults(JpaConst.ROW_PER_PAGE)
@@ -42,7 +41,6 @@ public class EmployeeService extends ServiceBase {
 
         return empCount;
     }
-
 
     /**
      * 社員番号、パスワードを条件に取得したデータをEmployeeViewのインスタンスで返却する
@@ -198,7 +196,7 @@ public class EmployeeService extends ServiceBase {
 
     /**
      * 社員番号とパスワードを条件に検索し、データが取得できるかどうかで認証結果を返却する
-     * @param code 社員番号EmployeeValidator、EmployeeService作成
+     * @param code 社員番号
      * @param plainPass パスワード
      * @param pepper pepper文字列
      * @return 認証結果を返却す(成功:true 失敗:false)

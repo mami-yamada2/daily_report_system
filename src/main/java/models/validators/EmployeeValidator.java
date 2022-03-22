@@ -110,12 +110,11 @@ public class EmployeeValidator {
     private static String validatePassword(String password, Boolean passwordCheckFlag) {
 
         //入力チェックを実施 かつ 入力値がなければエラーメッセージを返却
-        if(passwordCheckFlag && (password == null || password.equals(""))) {
+        if (passwordCheckFlag && (password == null || password.equals(""))) {
             return MessageConst.E_NOPASSWORD.getMessage();
         }
 
         //エラーがない場合は空文字を返却
         return "";
     }
-
 }

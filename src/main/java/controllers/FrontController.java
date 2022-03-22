@@ -14,7 +14,6 @@ import actions.UnknownAction;
 import constants.ForwardConst;
 
 /**
- * 
  * フロントコントローラ
  *
  */
@@ -42,7 +41,7 @@ public class FrontController extends HttpServlet {
         action.process();
     }
 
-    
+
     /**
      * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
      */

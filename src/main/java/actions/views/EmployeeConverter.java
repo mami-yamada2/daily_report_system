@@ -8,10 +8,9 @@ import constants.JpaConst;
 import models.Employee;
 
 /**
- *
  * 従業員データのDTOモデル⇔Viewモデルの変換を行うクラス
+ *
  */
-
 public class EmployeeConverter {
 
     /**
@@ -73,23 +72,22 @@ public class EmployeeConverter {
     /**
      * DTOモデルのリストからViewモデルのリストを作成する
      * @param list DTOモデルのリスト
-     * @param ev Viewモデルのリスト
+     * @return Viewモデルのリスト
      */
-    public static List<EmployeeView> toViewList(List<Employee> list){
+    public static List<EmployeeView> toViewList(List<Employee> list) {
         List<EmployeeView> evs = new ArrayList<>();
 
-            for(Employee e : list) {
-                evs.add(toView(e));
-            }
-
-            return evs;
+        for (Employee e : list) {
+            evs.add(toView(e));
         }
 
+        return evs;
+    }
 
     /**
      * Viewモデルの全フィールドの内容をDTOモデルのフィールドにコピーする
-     * @param e DTOモデル（コピー先）
-     * @param ev Viewモデル（コピー元）
+     * @param e DTOモデル(コピー先)
+     * @param ev Viewモデル(コピー元)
      */
     public static void copyViewToModel(Employee e, EmployeeView ev) {
         e.setId(ev.getId());

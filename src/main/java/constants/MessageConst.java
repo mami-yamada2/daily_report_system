@@ -4,13 +4,12 @@ package constants;
  * 各出力メッセージを定義するEnumクラス
  *
  */
-
 public enum MessageConst {
 
     //認証
     I_LOGINED("ログインしました"),
-    E_LOGINED("ログインに失敗しました"),
-    I_LOGOUT("ログアウトしました"),
+    E_LOGINED("ログインに失敗しました。"),
+    I_LOGOUT("ログアウトしました。"),
 
     //DB更新
     I_REGISTERED("登録が完了しました。"),
@@ -25,6 +24,7 @@ public enum MessageConst {
     E_NOTITLE("タイトルを入力してください。"),
     E_NOCONTENT("内容を入力してください。");
 
+
     /**
      * 文字列
      */
@@ -38,10 +38,9 @@ public enum MessageConst {
     }
 
     /**
-     * 値（文字列）取得
+     * 値(文字列)取得
      */
     public String getMessage() {
         return this.text;
     }
-
 }
